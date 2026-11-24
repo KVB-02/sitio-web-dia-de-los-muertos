@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día de los Muertos - México</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Encabezado y navegación principal -->
+    <header class="site-header">
+        <a class="logo" href="index.html" aria-label="Ir al inicio">
+            <img src="images/logo.png" alt="Logotipo del Día de Muertos">
+        </a>
+        <nav aria-label="Menú principal">
+            <ul class="nav-list">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" data-i18n="menu">EXPLORAR</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="historia.html" data-i18n="history">HISTORIA</a></li>
+                        <li><a href="altares.html" data-i18n="altars">ALTARES</a></li>
+                        <li><a href="gastronomia.html" data-i18n="food">GASTRONOMÍA</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#historia" data-i18n="history">HISTORIA</a></li>
+                <li><a href="index.html#altares" data-i18n="altars">ALTARES</a></li>
+                <li><a href="index.html#gastronomia" data-i18n="food">GASTRONOMÍA</a></li>
+                <li><a href="index.html#acercade" data-i18n="about">ACERCA DE</a></li>
+            </ul>
+        </nav>
+        <div class="language-tools">
+            <label for="site-language" data-i18n="language">Idioma</label>
+            <select id="site-language" aria-label="Seleccionar idioma">
+                <option value="es">Español</option>
+                <option value="en">English</option>
+                <option value="fr">Français</option>
+            </select>
+            <div id="google_translate_element" class="idioma" aria-label="Traductor de Google"></div>
+        </div>
+    </header>
+    <div class="welcome-bar" role="status" aria-live="polite">
+        <p id="welcome-message"></p>
+    </div>
+
+    <main>
+        <!-- Slider principal de imágenes -->
+        <section id="inicio" class="hero hero-slider" aria-label="Galería del Día de Muertos">
+            <div class="hero-slide is-active" style="background-image: url('images/puente.png')" aria-hidden="false">
+                <div class="titulos-hero"><h1>DÍA DE LOS MUERTOS</h1><p class="subtitulo">México</p></div>
+            </div>
+            <div class="hero-slide" style="background-image: url('images/desfile.jpg')" aria-hidden="true">
+                <div class="titulos-hero"><h1>TRADICIÓN Y MEMORIA</h1><p class="subtitulo">Una celebración de vida</p></div>
+            </div>
+            <div class="hero-slide" style="background-image: url('images/mujer.jpg')" aria-hidden="true">
+                <div class="titulos-hero"><h1>COLOR Y CULTURA</h1><p class="subtitulo">Honrando nuestras raíces</p></div>
+            </div>
+            <button class="slider-control slider-prev" type="button" aria-label="Imagen anterior">&#10094;</button>
+            <button class="slider-control slider-next" type="button" aria-label="Imagen siguiente">&#10095;</button>
+            <div class="slider-dots" aria-label="Seleccionar imagen"></div>
+            <div class="franja-bandera"></div>
+        </section>
+
+        <!-- SECCIÓN HISTORIA -->
+        <section id="historia" class="seccion-historia">
+            <h2 class="titulo-historia">¿Qué es el dia de los muertos?</h2>
+            
+            <div class="contenido-papel">
+                <img src="images/papel.png" alt="Fondo de papel rasgado decorativo" class="fondo-papel">
+                <p class="texto-papel">
+                    Aprende sobre la historia del Día de Muertos. Descubre los orígenes milenarios de esta festividad y comprende por qué, año tras año, miles de personas honran la memoria de sus difuntos en una celebración llena de vida.
+                </p>
+            </div>
+
+            <div class="flecha">
+                <a href="historia.html" aria-label="Ir a la página completa de historia">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <polyline points="19 12 12 19 5 12"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- SECCIÓN ALTARES -->
+        <section id="altares" class="seccion-altares">
+            <div class="contenedor-altares">
+                
+                <div class="altar-texto">
+                    <img src="images/papel-altares.png" alt="Fondo de papel viejo" class="fondo-papel-altar">
+                    <div class="contenido-texto-altar">
+                        
+                        <p>
+                            Descubre el corazón del Día de los Muertos: la ofrenda. Conoce el significado profundo de cada elemento, desde el brillo de la flor de cempasúchil hasta el aroma del copal, y aprende cómo estos altares guían a las almas de regreso a casa.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="altar-imagen">
+                    <img src="images/ilustracion-altar.png" alt="Ilustración colorida de un altar de muertos">
+                </div>
+                
+            </div> 
+            
+            <!-- FLECHA HACIA LA DERECHA -->
+            <div class="flecha-derecha">
+                <a href="altares.html" aria-label="Ir a la página completa de altares">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- SECCIÓN GASTRONOMÍA -->
+        <section id="gastronomia" class="seccion-gastronomia">
+            <div class="contenedor-gastronomia">
+                
+                <!-- Columna Izquierda: Imagen representativa -->
+                <div class="gastro-imagen">
+                    <!-- RECUERDA: Guardar una imagen con este nombre -->
+                    <img src="images/abrebocas-comida.png" alt="Mesa con pan de muerto y calaveritas de azúcar">
+                </div>
+                
+                <!-- Columna Derecha: Texto y flecha -->
+                <div class="gastro-texto">
+                    <h2 class="titulo-gastro">El Sabor del Recuerdo</h2>
+                    <p>
+                        En el Día de los Muertos, la muerte tiene un sabor dulce, picante y reconfortante. Los altares y las mesas familiares se llenan con los platillos favoritos de quienes partieron. Descubre el misticismo detrás del pan de muerto, las calaveritas de azúcar y las recetas tradicionales.
+                    </p>
+                    
+                    <!-- Flecha hacia la nueva página -->
+                    <div class="flecha-gastro">
+                        <a href="gastronomia.html" aria-label="Explorar la gastronomía completa">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#ff8c00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+    <!-- SECCIÓN FOOTER -->
+        <footer id="acercade" class="seccion-acercade">
+            <div class="contenedor-acercade">
+                <div class="info-footer">
+                    <h3>Acerca de</h3>
+                    <p>Sitio web desarrollado con fines académicos para la Universidad Nacional Abierta y a Distancia (UNAD). Un espacio dedicado a preservar, honrar y compartir la riqueza cultural del tradicional Día de los Muertos.</p>
+                </div>
+                
+                <div class="creditos-footer">
+                    <p>Vanessa Bautista</p>
+                    <p class="copyright">&copy; 2026 - Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+<!-- SCRIPT DEL TRADUCTOR DE GOOGLE -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es', 
+                includedLanguages: 'en,es', // Solo da la opción de Inglés y Español
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia - Día de los Muertos</title>
+
+    <!-- Conectar la misma hoja de estilos -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="pagina-historia">
+
+    <header class="site-header subpage-header">
+        <a class="logo" href="index.html" aria-label="Ir al inicio"><img src="images/logo.png" alt="Logotipo del Día de Muertos"></a>
+        <nav aria-label="Menú principal">
+            <ul class="nav-list">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" data-i18n="menu">EXPLORAR</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="historia.html" data-i18n="history">HISTORIA</a></li>
+                        <li><a href="altares.html" data-i18n="altars">ALTARES</a></li>
+                        <li><a href="gastronomia.html" data-i18n="food">GASTRONOMÍA</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#historia" data-i18n="history">HISTORIA</a></li>
+                <li><a href="index.html#altares" data-i18n="altars">ALTARES</a></li>
+                <li><a href="index.html#gastronomia" data-i18n="food">GASTRONOMÍA</a></li>
+                <li><a href="index.html#acercade" data-i18n="about">ACERCA DE</a></li>
+            </ul>
+        </nav>
+        <div class="language-tools">
+            <label for="site-language" data-i18n="language">Idioma</label>
+            <select id="site-language" aria-label="Seleccionar idioma">
+                <option value="es">Español</option><option value="en">English</option><option value="fr">Français</option>
+            </select>
+            <div id="google_translate_element" class="idioma" aria-label="Traductor de Google"></div>
+        </div>
+    </header>
+    <div class="welcome-bar" role="status" aria-live="polite"><p id="welcome-message"></p></div>
+
+    <main>
+        <section class="contenedor-historia">
+            <h1 class="titulo-principal">Los Orígenes de la Tradición</h1>
+            
+            <!-- Bloque 1: Texto a la izquierda, Imagen a la derecha -->
+            <div class="bloque-historia">
+                <div class="texto-historia">
+                    <h2>Raíces Prehispánicas</h2>
+                    <p>El Día de los Muertos tiene un origen milenario que se remonta a las culturas indígenas de Mesoamérica, como los aztecas, mayas y purépechas. Para estos pueblos antiguos, la muerte no representaba un final triste, sino un viaje natural hacia el Mictlán, el lugar de los muertos. Celebrar la vida de los ancestros era una práctica sagrada llena de respeto, rituales y alegría.</p>
+                </div>
+                <div class="imagen-historia">
+                    <img src="images/historia-1.jpg" alt="Antiguas tradiciones prehispánicas" class="img-decorada">
+                </div>
+            </div>
+
+            <!-- Bloque 2: Imagen a la izquierda, Texto a la derecha (Inverso) -->
+            <div class="bloque-historia inverso">
+                <div class="texto-historia">
+                    <h2>El Encuentro de Dos Mundos</h2>
+                    <p>Con la llegada de los españoles en el siglo XVI, ocurrió un sincretismo cultural fascinante. Los rituales indígenas para honrar a los difuntos se mezclaron con las festividades católicas del Día de Todos los Santos y los Fieles Difuntos. Esta mágica fusión dio lugar a la colorida, compasiva y rica celebración que México comparte hoy con el mundo entero.</p>
+                </div>
+                <div class="imagen-historia">
+                    <img src="images/historia-2.jpg" alt="Sincretismo cultural del día de los muertos" class="img-decorada">
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- 2. Scripts de Google Translate (Se mantienen en todas las páginas) -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es', 
+                includedLanguages: 'en,es', 
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>

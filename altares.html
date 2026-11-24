@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altares - Día de los Muertos</title>
+    <!-- Conectamos la misma hoja de estilos -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="pagina-altares">
+
+    <header class="site-header subpage-header">
+        <a class="logo" href="index.html" aria-label="Ir al inicio"><img src="images/logo.png" alt="Logotipo del Día de Muertos"></a>
+        <nav aria-label="Menú principal">
+            <ul class="nav-list">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" data-i18n="menu">EXPLORAR</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="historia.html" data-i18n="history">HISTORIA</a></li>
+                        <li><a href="altares.html" data-i18n="altars">ALTARES</a></li>
+                        <li><a href="gastronomia.html" data-i18n="food">GASTRONOMÍA</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#historia" data-i18n="history">HISTORIA</a></li>
+                <li><a href="index.html#altares" data-i18n="altars">ALTARES</a></li>
+                <li><a href="index.html#gastronomia" data-i18n="food">GASTRONOMÍA</a></li>
+                <li><a href="index.html#acercade" data-i18n="about">ACERCA DE</a></li>
+            </ul>
+        </nav>
+        <div class="language-tools">
+            <label for="site-language" data-i18n="language">Idioma</label>
+            <select id="site-language" aria-label="Seleccionar idioma">
+                <option value="es">Español</option><option value="en">English</option><option value="fr">Français</option>
+            </select>
+            <div id="google_translate_element" class="idioma" aria-label="Traductor de Google"></div>
+        </div>
+    </header>
+    <div class="welcome-bar" role="status" aria-live="polite"><p id="welcome-message"></p></div>
+
+    <main>
+        <section class="contenedor-historia">
+            <h1 class="titulo-principal">El Corazón del Día de los Muertos</h1>
+            <p style="text-align: center; color: #cccccc; font-size: 1.2rem; margin-bottom: 50px;">
+                Cada altar es un puente entre dos mundos. Conoce el significado profundo de los elementos que guían a las almas de regreso a casa.
+            </p>
+            
+            <!-- Cuadrícula de elementos del altar -->
+            <div class="grid-altares">
+                
+                <!-- Tarjeta 1: Flor de Cempasúchil -->
+                <div class="tarjeta-elemento">
+                    <img src="images/cempasuchil.png" alt="Flores de Cempasúchil naranjas">
+                    <h3>Flor de Cempasúchil</h3>
+                    <p>Su color vibrante que asimila al sol y su aroma intenso sirven para trazar el camino que las almas deben seguir para llegar a la ofrenda sin perderse.</p>
+                </div>
+
+                <!-- Tarjeta 2: El Copal y el Incienso -->
+                <div class="tarjeta-elemento">
+                    <img src="images/copal.jpg" alt="Humo de copal e incienso">
+                    <h3>El Copal e Incienso</h3>
+                    <p>Se utiliza para limpiar el lugar de los malos espíritus. Su aroma purifica el ambiente para que el alma pueda entrar a su antigua casa sin ningún peligro.</p>
+                </div>
+
+                <!-- Tarjeta 3: Velas y Veladoras -->
+                <div class="tarjeta-elemento">
+                    <img src="images/velas.jpg" alt="Velas iluminando el altar">
+                    <h3>El Brillo de las Velas</h3>
+                    <p>Representan la luz, la fe y la esperanza. Su llama parpadeante es la guía principal que ilumina el trayecto de los difuntos hacia nuestro mundo.</p>
+                </div>
+
+                <!-- Tarjeta 4: El Agua y la Sal -->
+                <div class="tarjeta-elemento">
+                    <img src="images/agua-sal.jpeg" alt="Vasos con agua y sal">
+                    <h3>Agua y Sal</h3>
+                    <p>El agua mitiga la sed del espíritu tras su largo viaje. La sal es el elemento de purificación, ayuda a que el cuerpo no se corrompa en su viaje de ida y vuelta.</p>
+                </div>
+
+                <!-- Tarjeta 5: La Comida y el Pan -->
+                <div class="tarjeta-elemento">
+                    <img src="images/comida.jpg" alt="Pan de muerto y platillos típicos">
+                    <h3>Banquete y Pan de Muerto</h3>
+                    <p>Se preparan los platillos favoritos del difunto para deleitarlo. El pan de muerto representa el ciclo de la vida y la muerte, adornado con formas de huesos.</p>
+                </div>
+
+                <!-- Tarjeta 6: Las Fotografías -->
+                <div class="tarjeta-elemento">
+                    <img src="images/fotos.jpg" alt="Fotografías de los difuntos">
+                    <h3>Retratos y Recuerdos</h3>
+                    <p>Es el elemento central de la ofrenda. Nos recuerda a quién está dedicado el altar y asegura que su memoria siga viva entre nosotros.</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- 2. Scripts de Google Translate (Se mantienen en todas las páginas) -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es', 
+                includedLanguages: 'en,es', 
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,837 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: white; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav a {
+    color: #ff9800;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* =========================================
+   ESTILOS DEL ENCABEZADO (HEADER)
+   ========================================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+nav a {
+    color: #e67e22;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffffff; 
+}
+
+.idioma button {
+    background: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* =========================================
+   SECCIÓN PRINCIPAL (HERO)
+   ========================================= */
+.hero {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* Se debe verificar que la ruta de la imagen sea la correcta */
+    background-image: url('../images/puente.png'); 
+    background-size: cover;
+    background-position: center;
+}
+
+.titulos-hero h1 {
+    font-size: 5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+}
+
+.subtitulo {
+    font-size: 3.5rem;
+    font-family: 'Brush Script MT', 'Caveat', cursive;
+    margin-top: -20px;
+    font-weight: lighter;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.franja-bandera {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    /* Genera los colores de la bandera mediante un gradiente lineal */
+    background: linear-gradient(to right, #006847 33.33%, #ffffff 33.33%, #ffffff 66.66%, #ce1126 66.66%);
+}
+
+/* =========================================
+   SECCIÓN HISTORIA (CAPA TRANSPARENTE)
+   ========================================= */
+.seccion-historia {
+    position: relative;
+    min-height: 100vh;
+    padding: 50px;
+    background-image: url('../images/bandera.png'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+/* Genera una capa superpuesta con transparencia para oscurecer el fondo */
+.seccion-historia::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+.contenido-papel {
+    position: relative;
+    width: 60%;
+    max-width: 650px;
+    text-align: center;
+}
+
+.fondo-papel {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Centra el texto de manera absoluta sobre el contenedor padre */
+.texto-papel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    color: #d35400;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.flecha {
+    margin-top: 40px;
+    animation: rebotar 2s infinite;
+    cursor: pointer;
+}
+
+/* Define la animación de rebote vertical */
+@keyframes rebotar {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-15px);
+    }
+    60% {
+        transform: translateY(-7px);
+    }
+}
+
+/* =========================================
+   PÁGINA DE HISTORIA (DISEÑO Y CONTENIDO)
+   ========================================= */
+.pagina-historia {
+    background-color: #1a1a1a; 
+}
+
+.btn-volver {
+    display: inline-block;
+    background-color: #ff8c00;
+    color: #1a1a1a !important; /* Cambiado de white a gris muy oscuro */
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold; /* Añadimos negrita para mejorar la legibilidad */
+}
+
+.btn-volver:hover {
+    background-color: #d35400; 
+    color: #ffffff !important; 
+}
+
+.contenedor-historia {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.titulo-principal {
+    text-align: center;
+    color: #ff8c00;
+    font-size: 3rem;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+}
+
+.bloque-historia {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 80px;
+}
+
+/* Invierte el orden de los elementos en el contenedor */
+.bloque-historia.inverso {
+    flex-direction: row-reverse;
+}
+
+.texto-historia {
+    flex: 1;
+}
+
+.texto-historia h2 {
+    color: #e67e22;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.texto-historia p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #cccccc;
+}
+
+.imagen-historia {
+    flex: 1;
+    text-align: center;
+}
+
+/* Aplica una sombra sólida como marco decorativo */
+.img-decorada {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+    box-shadow: -15px 15px 0px #ff8c00;
+}
+
+.inverso .img-decorada {
+    box-shadow: 15px 15px 0px #8e44ad;
+}
+
+/* =========================================
+   SECCIÓN ALTARES
+   ========================================= */
+.seccion-altares {
+    position: relative;
+    min-height: 100vh;
+    background-color: #2a1c2e;
+    padding: 80px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-altares {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px; 
+    gap: 40px; 
+}
+
+.altar-texto {
+    position: relative;
+    width: 50%;
+}
+
+.fondo-papel-altar {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.contenido-texto-altar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    color: #4a148c;
+    font-weight: bold;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.etiqueta-naranja {
+    color: #b36200; 
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    position: absolute;
+    top: -30px; 
+    left: -20px; 
+    transform: rotate(-8deg);
+    background-color: #f4f1ea;
+    padding: 5px 15px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.altar-imagen {
+    width: 50%;
+}
+
+.altar-imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    border: 10px solid white;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+}
+
+.flecha-derecha {
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+    animation: moverDerecha 2s infinite; 
+}
+
+/* Define la animación de movimiento horizontal */
+@keyframes moverDerecha {
+    0%, 20%, 50%, 80%, 100% { transform: translateX(0); }
+    40% { transform: translateX(15px); }
+    60% { transform: translateX(7px); }
+}
+
+/* =========================================
+   PÁGINA DE ALTARES (DISEÑO DE TARJETAS)
+   ========================================= */
+.pagina-altares {
+    background-color: #2a1c2e;
+}
+
+/* Genera un sistema de columnas que se adapta automáticamente al ancho */
+.grid-altares {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.tarjeta-elemento {
+    background-color: #3b2840;
+    padding: 25px;
+    border-radius: 15px;
+    border-top: 5px solid #ff8c00;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-elemento:hover {
+    transform: translateY(-10px);
+}
+
+.tarjeta-elemento img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.tarjeta-elemento h3 {
+    color: #ff8c00;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.tarjeta-elemento p {
+    color: #e0e0e0;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* =========================================
+   SECCIÓN GASTRONOMÍA (ABREBOCAS)
+   ========================================= */
+.seccion-gastronomia {
+    position: relative;
+    min-height: 100vh;
+    background-color: #1a1a1a;
+    padding: 80px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-gastronomia {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
+    gap: 60px;
+}
+
+.gastro-imagen {
+    width: 50%;
+}
+
+.gastro-imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: -15px 15px 0px #e67e22;
+}
+
+.gastro-texto {
+    width: 50%;
+    color: #e0e0e0;
+}
+
+.titulo-gastro {
+    color: #e67e22;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.gastro-texto p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.flecha-gastro {
+    animation: moverDerecha 2s infinite; 
+}
+
+/* =========================================
+   PÁGINA DE GASTRONOMÍA (MENÚ)
+   ========================================= */
+.pagina-gastronomia {
+    background-color: #121212;
+}
+
+.contenedor-menu {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.tarjeta-platillo {
+    display: flex;
+    background-color: #242424;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid #333;
+}
+
+.tarjeta-platillo.inverso {
+    flex-direction: row-reverse;
+}
+
+.tarjeta-platillo img {
+    width: 45%;
+    object-fit: cover;
+}
+
+.info-platillo {
+    padding: 40px;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-platillo h3 {
+    color: #e67e22;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.info-platillo p {
+    color: #cccccc;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* =========================================
+   SECCIÓN ACERCA DE (FOOTER)
+   ========================================= */
+.seccion-acercade {
+    background-color: #0d0d0d;
+    color: #b0b0b0;
+    padding: 60px 20px 30px 20px;
+    border-top: 3px solid #ff8c00;
+}
+
+.contenedor-acercade {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.info-footer h3 {
+    color: #ff8c00;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.info-footer p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.creditos-footer {
+    border-top: 1px solid #222;
+    padding-top: 20px;
+    font-size: 0.95rem;
+}
+
+.copyright {
+    color: #777;
+    margin-top: 10px;
+}
+/* =========================================
+   PASO 4: DISEÑO ADAPTABLE (MEDIA QUERIES)
+   ========================================= */
+
+/* Ajustes para Tablets (hasta 900px) */
+@media (max-width: 900px) {
+    /* Convertimos las filas en columnas para que no se apriete el contenido */
+    .contenedor-altares,
+    .contenedor-gastronomia,
+    .bloque-historia {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    /* Reseteamos las clases inversas para que fluyan normal hacia abajo */
+    .bloque-historia.inverso {
+        flex-direction: column;
+    }
+
+    /* Hacemos que los contenedores divididos ocupen todo el ancho */
+    .altar-texto, .altar-imagen,
+    .gastro-imagen, .gastro-texto,
+    .texto-historia, .imagen-historia {
+        width: 100%;
+    }
+
+    .flecha-derecha {
+        position: static;
+        margin-top: 20px;
+    }
+}
+
+/* Ajustes para Teléfonos Móviles (hasta 768px) */
+@media (max-width: 768px) {
+    /* Reorganizamos el menú superior */
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* Reducimos los títulos gigantes del inicio */
+    .titulos-hero h1 {
+        font-size: 3rem;
+    }
+    
+    .subtitulo {
+        font-size: 2.2rem;
+    }
+
+    /* Apilamos las tarjetas del menú de gastronomía */
+    .tarjeta-platillo,
+    .tarjeta-platillo.inverso {
+        flex-direction: column;
+    }
+    
+    .tarjeta-platillo img, 
+    .info-platillo {
+        width: 100%;
+    }
+    
+    .info-platillo {
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* --- SOLUCIÓN DEFINITIVA: PAPEL Y TEXTO --- */
+    .contenido-papel, 
+    .altar-texto {
+        position: relative; /* Asegura que la caja controle a la imagen y al texto */
+        width: 100% !important;
+        padding: 80px 20px; /* Espacio extra arriba y abajo para que el texto no toque los bordes rotos del papel */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .fondo-papel, 
+    .fondo-papel-altar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: fill; 
+        z-index: 0;
+    }
+
+    .texto-papel, 
+    .contenido-texto-altar {
+        position: relative; 
+        top: auto;
+        left: auto;
+        transform: none; 
+        width: 90%;
+        font-size: 1rem; 
+        z-index: 2; 
+    }
+
+    /* --- ARREGLO PARA TODAS LAS FLECHAS --- */
+    .flecha,
+    .flecha-derecha,
+    .flecha-gastro {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+/* =====================================================
+   ELEMENTOS DINÁMICOS - FASE 4 (JAVASCRIPT)
+   ===================================================== */
+.site-header {
+    position: relative;
+    z-index: 20;
+    gap: 24px;
+    background: #111;
+}
+
+.site-header .logo { flex: 0 0 auto; }
+.site-header nav { flex: 1; }
+.site-header nav a { display: inline-block; }
+
+.nav-list .dropdown { position: relative; }
+.dropdown-toggle::after {
+    content: " ▾";
+    font-size: .8em;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 190px;
+    padding: 10px 0;
+    list-style: none;
+    background: #241b20;
+    border: 1px solid #a85a19;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.45);
+    z-index: 50;
+}
+.dropdown-menu li { display: block; }
+.dropdown-menu a {
+    display: block;
+    padding: 12px 18px;
+    white-space: nowrap;
+    color: #f3a34a;
+}
+.dropdown-menu a:hover,
+.dropdown-menu a:focus {
+    color: #fff;
+    background: #493023;
+}
+.dropdown.is-open > .dropdown-menu { display: block; }
+
+.language-tools {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.language-tools label {
+    color: #f2a04a;
+    font-size: .85rem;
+    font-weight: 700;
+}
+#site-language {
+    max-width: 125px;
+    padding: 8px;
+    color: #fff;
+    background: #292323;
+    border: 1px solid #b96b25;
+    border-radius: 6px;
+}
+#site-language:focus,
+.dropdown a:focus,
+.slider-control:focus,
+.slider-dot:focus {
+    outline: 3px solid #ffd27a;
+    outline-offset: 3px;
+}
+.welcome-bar {
+    padding: 12px 20px;
+    text-align: center;
+    color: #fff3df;
+    background: #44251b;
+    border-bottom: 2px solid #e67e22;
+}
+.welcome-bar p { line-height: 1.5; }
+
+.hero-slider {
+    overflow: hidden;
+    isolation: isolate;
+}
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 90px;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .8s ease, visibility .8s ease;
+}
+.hero-slide::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.38);
+    z-index: -1;
+}
+.hero-slide.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+.hero-slide .titulos-hero { position: relative; z-index: 1; }
+.slider-control {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    transform: translateY(-50%);
+    width: 46px;
+    height: 46px;
+    border: 1px solid rgba(255,255,255,.75);
+    border-radius: 50%;
+    color: white;
+    background: rgba(0,0,0,.55);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background .2s ease;
+}
+.slider-control:hover { background: #a84e16; }
+.slider-prev { left: 22px; }
+.slider-next { right: 22px; }
+.slider-dots {
+    position: absolute;
+    z-index: 6;
+    left: 0;
+    right: 0;
+    bottom: 48px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.slider-dot {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: rgba(255,255,255,.4);
+    cursor: pointer;
+}
+.slider-dot.is-active { background: #ff9800; transform: scale(1.2); }
+
+@media (max-width: 900px) {
+    .site-header { flex-wrap: wrap; justify-content: center; }
+    .site-header nav { flex: 1 1 100%; }
+    .site-header .nav-list { justify-content: center; }
+    .language-tools { justify-content: center; }
+}
+@media (max-width: 600px) {
+    .site-header { padding: 14px; }
+    .site-header .logo img { width: 65px; }
+    .site-header nav ul { gap: 10px; }
+    .site-header nav a { font-size: 12px; }
+    .dropdown-menu { left: 50%; transform: translateX(-50%); }
+    .hero-slide { padding: 35px 55px; }
+    .titulos-hero h1 { font-size: clamp(2rem, 9vw, 3rem); }
+    .subtitulo { font-size: 2rem; }
+    .slider-control { width: 38px; height: 38px; font-size: 1.2rem; }
+    .slider-prev { left: 10px; }
+    .slider-next { right: 10px; }
+    .slider-dots { bottom: 45px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+}

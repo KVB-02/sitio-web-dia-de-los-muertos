@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastronomía - Día de los Muertos</title>
+
+    <!-- Conectar la misma hoja de estilos -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="pagina-gastronomia">
+
+    <header class="site-header subpage-header">
+        <a class="logo" href="index.html" aria-label="Ir al inicio"><img src="images/logo.png" alt="Logotipo del Día de Muertos"></a>
+        <nav aria-label="Menú principal">
+            <ul class="nav-list">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" data-i18n="menu">EXPLORAR</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="historia.html" data-i18n="history">HISTORIA</a></li>
+                        <li><a href="altares.html" data-i18n="altars">ALTARES</a></li>
+                        <li><a href="gastronomia.html" data-i18n="food">GASTRONOMÍA</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#historia" data-i18n="history">HISTORIA</a></li>
+                <li><a href="index.html#altares" data-i18n="altars">ALTARES</a></li>
+                <li><a href="index.html#gastronomia" data-i18n="food">GASTRONOMÍA</a></li>
+                <li><a href="index.html#acercade" data-i18n="about">ACERCA DE</a></li>
+            </ul>
+        </nav>
+        <div class="language-tools">
+            <label for="site-language" data-i18n="language">Idioma</label>
+            <select id="site-language" aria-label="Seleccionar idioma">
+                <option value="es">Español</option><option value="en">English</option><option value="fr">Français</option>
+            </select>
+            <div id="google_translate_element" class="idioma" aria-label="Traductor de Google"></div>
+        </div>
+    </header>
+    <div class="welcome-bar" role="status" aria-live="polite"><p id="welcome-message"></p></div>
+
+    <main>
+        <section class="contenedor-menu">
+            <h1 class="titulo-principal">Un Banquete para las Almas</h1>
+            <p style="text-align: center; color: #cccccc; font-size: 1.2rem; margin-bottom: 50px;">
+                La comida es el lenguaje con el que los vivos invitan a los muertos a volver a casa. Conoce los platillos tradicionales que nunca faltan en esta celebración.
+            </p>
+
+            <!-- Plato 1 -->
+            <article class="tarjeta-platillo">
+                <!-- Recuerda descargar una foto con este nombre -->
+                <img src="images/pan-muerto.jpg" alt="Delicioso Pan de Muerto tradicional">
+                <div class="info-platillo">
+                    <h3>Pan de Muerto</h3>
+                    <p>El protagonista indiscutible. Es un pan dulce horneado con un toque de azahar o anís. Su forma circular representa el ciclo de la vida y la muerte, y las tiras de masa en la parte superior simulan los huesos y las lágrimas derramadas por los difuntos.</p>
+                </div>
+            </article>
+
+            <!-- Plato 2 -->
+            <article class="tarjeta-platillo inverso">
+                <div class="info-platillo">
+                    <h3>Calaveritas de Azúcar</h3>
+                    <p>Coloridas y decoradas con glaseado, lentejuelas y papel brillante. Se preparan con una técnica antigua llamada alfeñique. A menudo llevan el nombre del difunto (o de alguien vivo, como una broma) en la frente, recordándonos que la muerte es parte dulce de la vida.</p>
+                </div>
+                <img src="images/calaveritas.jpg" alt="Calaveritas de azúcar de colores">
+            </article>
+
+            <!-- Plato 3 -->
+            <article class="tarjeta-platillo">
+                <img src="images/tamales.jpeg" alt="Tamales envueltos en hojas de maíz">
+                <div class="info-platillo">
+                    <h3>Tamales y Mole</h3>
+                    <p>El mole, con su compleja mezcla de chiles, chocolate y especias, es considerado un platillo de fiesta. Se sirve frecuentemente sobre pollo o pavo, o rellenando deliciosos tamales envueltos en hojas de maíz o plátano, listos para que los difuntos absorban su esencia.</p>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <!-- 2. Botones de Google Translate (Se mantienen en todas las páginas) -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es', 
+                includedLanguages: 'en,es', 
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>
